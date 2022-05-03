@@ -1,0 +1,1842 @@
+{
+  "States": [
+    "Start",
+    "R",
+    "E",
+    "S",
+    "Add",
+    "Add'",
+    "Range",
+    "Range'",
+    "RangeItem"
+  ],
+  "Terminals": [
+    "EOF",
+    "*",
+    "+",
+    "Char",
+    "(",
+    ")",
+    "|",
+    "[",
+    "]",
+    "-"
+  ],
+  "StateDeltas": [
+    {
+      "Start": {
+        "Type": "Error"
+      },
+      "R": {
+        "Type": "Push",
+        "State": 1
+      },
+      "E": {
+        "Type": "Error"
+      },
+      "S": {
+        "Type": "Error"
+      },
+      "Add": {
+        "Type": "Error"
+      },
+      "Add'": {
+        "Type": "Error"
+      },
+      "Range": {
+        "Type": "Error"
+      },
+      "Range'": {
+        "Type": "Error"
+      },
+      "RangeItem": {
+        "Type": "Error"
+      }
+    },
+    {
+      "Start": {
+        "Type": "Error"
+      },
+      "R": {
+        "Type": "Error"
+      },
+      "E": {
+        "Type": "Push",
+        "State": 2
+      },
+      "S": {
+        "Type": "Push",
+        "State": 3
+      },
+      "Add": {
+        "Type": "Push",
+        "State": 4
+      },
+      "Add'": {
+        "Type": "Error"
+      },
+      "Range": {
+        "Type": "Push",
+        "State": 5
+      },
+      "Range'": {
+        "Type": "Error"
+      },
+      "RangeItem": {
+        "Type": "Error"
+      }
+    },
+    {
+      "Start": {
+        "Type": "Error"
+      },
+      "R": {
+        "Type": "Error"
+      },
+      "E": {
+        "Type": "Error"
+      },
+      "S": {
+        "Type": "Error"
+      },
+      "Add": {
+        "Type": "Error"
+      },
+      "Add'": {
+        "Type": "Error"
+      },
+      "Range": {
+        "Type": "Error"
+      },
+      "Range'": {
+        "Type": "Error"
+      },
+      "RangeItem": {
+        "Type": "Error"
+      }
+    },
+    {
+      "Start": {
+        "Type": "Error"
+      },
+      "R": {
+        "Type": "Error"
+      },
+      "E": {
+        "Type": "Error"
+      },
+      "S": {
+        "Type": "Error"
+      },
+      "Add": {
+        "Type": "Error"
+      },
+      "Add'": {
+        "Type": "Error"
+      },
+      "Range": {
+        "Type": "Error"
+      },
+      "Range'": {
+        "Type": "Error"
+      },
+      "RangeItem": {
+        "Type": "Error"
+      }
+    },
+    {
+      "Start": {
+        "Type": "Error"
+      },
+      "R": {
+        "Type": "Error"
+      },
+      "E": {
+        "Type": "Error"
+      },
+      "S": {
+        "Type": "Error"
+      },
+      "Add": {
+        "Type": "Error"
+      },
+      "Add'": {
+        "Type": "Error"
+      },
+      "Range": {
+        "Type": "Error"
+      },
+      "Range'": {
+        "Type": "Error"
+      },
+      "RangeItem": {
+        "Type": "Error"
+      }
+    },
+    {
+      "Start": {
+        "Type": "Error"
+      },
+      "R": {
+        "Type": "Error"
+      },
+      "E": {
+        "Type": "Error"
+      },
+      "S": {
+        "Type": "Error"
+      },
+      "Add": {
+        "Type": "Error"
+      },
+      "Add'": {
+        "Type": "Error"
+      },
+      "Range": {
+        "Type": "Error"
+      },
+      "Range'": {
+        "Type": "Error"
+      },
+      "RangeItem": {
+        "Type": "Error"
+      }
+    },
+    {
+      "Start": {
+        "Type": "Error"
+      },
+      "R": {
+        "Type": "Error"
+      },
+      "E": {
+        "Type": "Error"
+      },
+      "S": {
+        "Type": "Error"
+      },
+      "Add": {
+        "Type": "Error"
+      },
+      "Add'": {
+        "Type": "Error"
+      },
+      "Range": {
+        "Type": "Error"
+      },
+      "Range'": {
+        "Type": "Error"
+      },
+      "RangeItem": {
+        "Type": "Error"
+      }
+    },
+    {
+      "Start": {
+        "Type": "Error"
+      },
+      "R": {
+        "Type": "Error"
+      },
+      "E": {
+        "Type": "Error"
+      },
+      "S": {
+        "Type": "Error"
+      },
+      "Add": {
+        "Type": "Error"
+      },
+      "Add'": {
+        "Type": "Error"
+      },
+      "Range": {
+        "Type": "Error"
+      },
+      "Range'": {
+        "Type": "Error"
+      },
+      "RangeItem": {
+        "Type": "Error"
+      }
+    },
+    {
+      "Start": {
+        "Type": "Error"
+      },
+      "R": {
+        "Type": "Push",
+        "State": 12
+      },
+      "E": {
+        "Type": "Error"
+      },
+      "S": {
+        "Type": "Error"
+      },
+      "Add": {
+        "Type": "Error"
+      },
+      "Add'": {
+        "Type": "Error"
+      },
+      "Range": {
+        "Type": "Error"
+      },
+      "Range'": {
+        "Type": "Error"
+      },
+      "RangeItem": {
+        "Type": "Error"
+      }
+    },
+    {
+      "Start": {
+        "Type": "Error"
+      },
+      "R": {
+        "Type": "Error"
+      },
+      "E": {
+        "Type": "Error"
+      },
+      "S": {
+        "Type": "Error"
+      },
+      "Add": {
+        "Type": "Error"
+      },
+      "Add'": {
+        "Type": "Error"
+      },
+      "Range": {
+        "Type": "Error"
+      },
+      "Range'": {
+        "Type": "Push",
+        "State": 13
+      },
+      "RangeItem": {
+        "Type": "Push",
+        "State": 14
+      }
+    },
+    {
+      "Start": {
+        "Type": "Error"
+      },
+      "R": {
+        "Type": "Error"
+      },
+      "E": {
+        "Type": "Error"
+      },
+      "S": {
+        "Type": "Error"
+      },
+      "Add": {
+        "Type": "Error"
+      },
+      "Add'": {
+        "Type": "Error"
+      },
+      "Range": {
+        "Type": "Error"
+      },
+      "Range'": {
+        "Type": "Error"
+      },
+      "RangeItem": {
+        "Type": "Error"
+      }
+    },
+    {
+      "Start": {
+        "Type": "Error"
+      },
+      "R": {
+        "Type": "Error"
+      },
+      "E": {
+        "Type": "Error"
+      },
+      "S": {
+        "Type": "Error"
+      },
+      "Add": {
+        "Type": "Error"
+      },
+      "Add'": {
+        "Type": "Error"
+      },
+      "Range": {
+        "Type": "Error"
+      },
+      "Range'": {
+        "Type": "Error"
+      },
+      "RangeItem": {
+        "Type": "Error"
+      }
+    },
+    {
+      "Start": {
+        "Type": "Error"
+      },
+      "R": {
+        "Type": "Error"
+      },
+      "E": {
+        "Type": "Push",
+        "State": 2
+      },
+      "S": {
+        "Type": "Push",
+        "State": 3
+      },
+      "Add": {
+        "Type": "Push",
+        "State": 4
+      },
+      "Add'": {
+        "Type": "Push",
+        "State": 17
+      },
+      "Range": {
+        "Type": "Push",
+        "State": 5
+      },
+      "Range'": {
+        "Type": "Error"
+      },
+      "RangeItem": {
+        "Type": "Error"
+      }
+    },
+    {
+      "Start": {
+        "Type": "Error"
+      },
+      "R": {
+        "Type": "Error"
+      },
+      "E": {
+        "Type": "Error"
+      },
+      "S": {
+        "Type": "Error"
+      },
+      "Add": {
+        "Type": "Error"
+      },
+      "Add'": {
+        "Type": "Error"
+      },
+      "Range": {
+        "Type": "Error"
+      },
+      "Range'": {
+        "Type": "Error"
+      },
+      "RangeItem": {
+        "Type": "Error"
+      }
+    },
+    {
+      "Start": {
+        "Type": "Error"
+      },
+      "R": {
+        "Type": "Error"
+      },
+      "E": {
+        "Type": "Error"
+      },
+      "S": {
+        "Type": "Error"
+      },
+      "Add": {
+        "Type": "Error"
+      },
+      "Add'": {
+        "Type": "Error"
+      },
+      "Range": {
+        "Type": "Error"
+      },
+      "Range'": {
+        "Type": "Push",
+        "State": 20
+      },
+      "RangeItem": {
+        "Type": "Push",
+        "State": 14
+      }
+    },
+    {
+      "Start": {
+        "Type": "Error"
+      },
+      "R": {
+        "Type": "Error"
+      },
+      "E": {
+        "Type": "Error"
+      },
+      "S": {
+        "Type": "Error"
+      },
+      "Add": {
+        "Type": "Error"
+      },
+      "Add'": {
+        "Type": "Error"
+      },
+      "Range": {
+        "Type": "Error"
+      },
+      "Range'": {
+        "Type": "Error"
+      },
+      "RangeItem": {
+        "Type": "Error"
+      }
+    },
+    {
+      "Start": {
+        "Type": "Error"
+      },
+      "R": {
+        "Type": "Error"
+      },
+      "E": {
+        "Type": "Error"
+      },
+      "S": {
+        "Type": "Error"
+      },
+      "Add": {
+        "Type": "Error"
+      },
+      "Add'": {
+        "Type": "Error"
+      },
+      "Range": {
+        "Type": "Error"
+      },
+      "Range'": {
+        "Type": "Error"
+      },
+      "RangeItem": {
+        "Type": "Error"
+      }
+    },
+    {
+      "Start": {
+        "Type": "Error"
+      },
+      "R": {
+        "Type": "Error"
+      },
+      "E": {
+        "Type": "Error"
+      },
+      "S": {
+        "Type": "Error"
+      },
+      "Add": {
+        "Type": "Error"
+      },
+      "Add'": {
+        "Type": "Error"
+      },
+      "Range": {
+        "Type": "Error"
+      },
+      "Range'": {
+        "Type": "Error"
+      },
+      "RangeItem": {
+        "Type": "Error"
+      }
+    },
+    {
+      "Start": {
+        "Type": "Error"
+      },
+      "R": {
+        "Type": "Error"
+      },
+      "E": {
+        "Type": "Error"
+      },
+      "S": {
+        "Type": "Error"
+      },
+      "Add": {
+        "Type": "Error"
+      },
+      "Add'": {
+        "Type": "Error"
+      },
+      "Range": {
+        "Type": "Error"
+      },
+      "Range'": {
+        "Type": "Error"
+      },
+      "RangeItem": {
+        "Type": "Error"
+      }
+    },
+    {
+      "Start": {
+        "Type": "Error"
+      },
+      "R": {
+        "Type": "Push",
+        "State": 22
+      },
+      "E": {
+        "Type": "Error"
+      },
+      "S": {
+        "Type": "Error"
+      },
+      "Add": {
+        "Type": "Error"
+      },
+      "Add'": {
+        "Type": "Error"
+      },
+      "Range": {
+        "Type": "Error"
+      },
+      "Range'": {
+        "Type": "Error"
+      },
+      "RangeItem": {
+        "Type": "Error"
+      }
+    },
+    {
+      "Start": {
+        "Type": "Error"
+      },
+      "R": {
+        "Type": "Error"
+      },
+      "E": {
+        "Type": "Error"
+      },
+      "S": {
+        "Type": "Error"
+      },
+      "Add": {
+        "Type": "Error"
+      },
+      "Add'": {
+        "Type": "Error"
+      },
+      "Range": {
+        "Type": "Error"
+      },
+      "Range'": {
+        "Type": "Error"
+      },
+      "RangeItem": {
+        "Type": "Error"
+      }
+    },
+    {
+      "Start": {
+        "Type": "Error"
+      },
+      "R": {
+        "Type": "Error"
+      },
+      "E": {
+        "Type": "Error"
+      },
+      "S": {
+        "Type": "Error"
+      },
+      "Add": {
+        "Type": "Error"
+      },
+      "Add'": {
+        "Type": "Error"
+      },
+      "Range": {
+        "Type": "Error"
+      },
+      "Range'": {
+        "Type": "Error"
+      },
+      "RangeItem": {
+        "Type": "Error"
+      }
+    },
+    {
+      "Start": {
+        "Type": "Error"
+      },
+      "R": {
+        "Type": "Error"
+      },
+      "E": {
+        "Type": "Push",
+        "State": 2
+      },
+      "S": {
+        "Type": "Push",
+        "State": 3
+      },
+      "Add": {
+        "Type": "Push",
+        "State": 4
+      },
+      "Add'": {
+        "Type": "Push",
+        "State": 24
+      },
+      "Range": {
+        "Type": "Push",
+        "State": 5
+      },
+      "Range'": {
+        "Type": "Error"
+      },
+      "RangeItem": {
+        "Type": "Error"
+      }
+    },
+    {
+      "Start": {
+        "Type": "Error"
+      },
+      "R": {
+        "Type": "Error"
+      },
+      "E": {
+        "Type": "Error"
+      },
+      "S": {
+        "Type": "Error"
+      },
+      "Add": {
+        "Type": "Error"
+      },
+      "Add'": {
+        "Type": "Error"
+      },
+      "Range": {
+        "Type": "Error"
+      },
+      "Range'": {
+        "Type": "Error"
+      },
+      "RangeItem": {
+        "Type": "Error"
+      }
+    },
+    {
+      "Start": {
+        "Type": "Error"
+      },
+      "R": {
+        "Type": "Error"
+      },
+      "E": {
+        "Type": "Error"
+      },
+      "S": {
+        "Type": "Error"
+      },
+      "Add": {
+        "Type": "Error"
+      },
+      "Add'": {
+        "Type": "Error"
+      },
+      "Range": {
+        "Type": "Error"
+      },
+      "Range'": {
+        "Type": "Error"
+      },
+      "RangeItem": {
+        "Type": "Error"
+      }
+    }
+  ],
+  "TerminalDeltas": [
+    {
+      "EOF": {
+        "Type": "Reduce",
+        "Delta": 1
+      },
+      "*": {
+        "Type": "Error"
+      },
+      "+": {
+        "Type": "Error"
+      },
+      "Char": {
+        "Type": "Reduce",
+        "Delta": 1
+      },
+      "(": {
+        "Type": "Reduce",
+        "Delta": 1
+      },
+      ")": {
+        "Type": "Error"
+      },
+      "|": {
+        "Type": "Error"
+      },
+      "[": {
+        "Type": "Reduce",
+        "Delta": 1
+      },
+      "]": {
+        "Type": "Error"
+      },
+      "-": {
+        "Type": "Error"
+      }
+    },
+    {
+      "EOF": {
+        "Type": "Push",
+        "State": 6
+      },
+      "*": {
+        "Type": "Error"
+      },
+      "+": {
+        "Type": "Error"
+      },
+      "Char": {
+        "Type": "Push",
+        "State": 7
+      },
+      "(": {
+        "Type": "Push",
+        "State": 8
+      },
+      ")": {
+        "Type": "Error"
+      },
+      "|": {
+        "Type": "Error"
+      },
+      "[": {
+        "Type": "Push",
+        "State": 9
+      },
+      "]": {
+        "Type": "Error"
+      },
+      "-": {
+        "Type": "Error"
+      }
+    },
+    {
+      "EOF": {
+        "Type": "Reduce",
+        "Delta": 3
+      },
+      "*": {
+        "Type": "Error"
+      },
+      "+": {
+        "Type": "Error"
+      },
+      "Char": {
+        "Type": "Reduce",
+        "Delta": 3
+      },
+      "(": {
+        "Type": "Reduce",
+        "Delta": 3
+      },
+      ")": {
+        "Type": "Reduce",
+        "Delta": 3
+      },
+      "|": {
+        "Type": "Reduce",
+        "Delta": 3
+      },
+      "[": {
+        "Type": "Reduce",
+        "Delta": 3
+      },
+      "]": {
+        "Type": "Error"
+      },
+      "-": {
+        "Type": "Error"
+      }
+    },
+    {
+      "EOF": {
+        "Type": "Reduce",
+        "Delta": 2
+      },
+      "*": {
+        "Type": "Push",
+        "State": 10
+      },
+      "+": {
+        "Type": "Push",
+        "State": 11
+      },
+      "Char": {
+        "Type": "Reduce",
+        "Delta": 2
+      },
+      "(": {
+        "Type": "Reduce",
+        "Delta": 2
+      },
+      ")": {
+        "Type": "Reduce",
+        "Delta": 2
+      },
+      "|": {
+        "Type": "Reduce",
+        "Delta": 2
+      },
+      "[": {
+        "Type": "Reduce",
+        "Delta": 2
+      },
+      "]": {
+        "Type": "Error"
+      },
+      "-": {
+        "Type": "Error"
+      }
+    },
+    {
+      "EOF": {
+        "Type": "Reduce",
+        "Delta": 7
+      },
+      "*": {
+        "Type": "Reduce",
+        "Delta": 7
+      },
+      "+": {
+        "Type": "Reduce",
+        "Delta": 7
+      },
+      "Char": {
+        "Type": "Reduce",
+        "Delta": 7
+      },
+      "(": {
+        "Type": "Reduce",
+        "Delta": 7
+      },
+      ")": {
+        "Type": "Reduce",
+        "Delta": 7
+      },
+      "|": {
+        "Type": "Reduce",
+        "Delta": 7
+      },
+      "[": {
+        "Type": "Reduce",
+        "Delta": 7
+      },
+      "]": {
+        "Type": "Error"
+      },
+      "-": {
+        "Type": "Error"
+      }
+    },
+    {
+      "EOF": {
+        "Type": "Reduce",
+        "Delta": 8
+      },
+      "*": {
+        "Type": "Reduce",
+        "Delta": 8
+      },
+      "+": {
+        "Type": "Reduce",
+        "Delta": 8
+      },
+      "Char": {
+        "Type": "Reduce",
+        "Delta": 8
+      },
+      "(": {
+        "Type": "Reduce",
+        "Delta": 8
+      },
+      ")": {
+        "Type": "Reduce",
+        "Delta": 8
+      },
+      "|": {
+        "Type": "Reduce",
+        "Delta": 8
+      },
+      "[": {
+        "Type": "Reduce",
+        "Delta": 8
+      },
+      "]": {
+        "Type": "Error"
+      },
+      "-": {
+        "Type": "Error"
+      }
+    },
+    {
+      "EOF": {
+        "Type": "Error"
+      },
+      "*": {
+        "Type": "Error"
+      },
+      "+": {
+        "Type": "Error"
+      },
+      "Char": {
+        "Type": "Error"
+      },
+      "(": {
+        "Type": "Error"
+      },
+      ")": {
+        "Type": "Error"
+      },
+      "|": {
+        "Type": "Error"
+      },
+      "[": {
+        "Type": "Error"
+      },
+      "]": {
+        "Type": "Error"
+      },
+      "-": {
+        "Type": "Error"
+      }
+    },
+    {
+      "EOF": {
+        "Type": "Reduce",
+        "Delta": 6
+      },
+      "*": {
+        "Type": "Reduce",
+        "Delta": 6
+      },
+      "+": {
+        "Type": "Reduce",
+        "Delta": 6
+      },
+      "Char": {
+        "Type": "Reduce",
+        "Delta": 6
+      },
+      "(": {
+        "Type": "Reduce",
+        "Delta": 6
+      },
+      ")": {
+        "Type": "Reduce",
+        "Delta": 6
+      },
+      "|": {
+        "Type": "Reduce",
+        "Delta": 6
+      },
+      "[": {
+        "Type": "Reduce",
+        "Delta": 6
+      },
+      "]": {
+        "Type": "Error"
+      },
+      "-": {
+        "Type": "Error"
+      }
+    },
+    {
+      "EOF": {
+        "Type": "Error"
+      },
+      "*": {
+        "Type": "Error"
+      },
+      "+": {
+        "Type": "Error"
+      },
+      "Char": {
+        "Type": "Reduce",
+        "Delta": 1
+      },
+      "(": {
+        "Type": "Reduce",
+        "Delta": 1
+      },
+      ")": {
+        "Type": "Reduce",
+        "Delta": 1
+      },
+      "|": {
+        "Type": "Reduce",
+        "Delta": 1
+      },
+      "[": {
+        "Type": "Reduce",
+        "Delta": 1
+      },
+      "]": {
+        "Type": "Error"
+      },
+      "-": {
+        "Type": "Error"
+      }
+    },
+    {
+      "EOF": {
+        "Type": "Error"
+      },
+      "*": {
+        "Type": "Error"
+      },
+      "+": {
+        "Type": "Error"
+      },
+      "Char": {
+        "Type": "Push",
+        "State": 15
+      },
+      "(": {
+        "Type": "Error"
+      },
+      ")": {
+        "Type": "Error"
+      },
+      "|": {
+        "Type": "Error"
+      },
+      "[": {
+        "Type": "Error"
+      },
+      "]": {
+        "Type": "Push",
+        "State": 16
+      },
+      "-": {
+        "Type": "Error"
+      }
+    },
+    {
+      "EOF": {
+        "Type": "Reduce",
+        "Delta": 4
+      },
+      "*": {
+        "Type": "Error"
+      },
+      "+": {
+        "Type": "Error"
+      },
+      "Char": {
+        "Type": "Reduce",
+        "Delta": 4
+      },
+      "(": {
+        "Type": "Reduce",
+        "Delta": 4
+      },
+      ")": {
+        "Type": "Reduce",
+        "Delta": 4
+      },
+      "|": {
+        "Type": "Reduce",
+        "Delta": 4
+      },
+      "[": {
+        "Type": "Reduce",
+        "Delta": 4
+      },
+      "]": {
+        "Type": "Error"
+      },
+      "-": {
+        "Type": "Error"
+      }
+    },
+    {
+      "EOF": {
+        "Type": "Reduce",
+        "Delta": 5
+      },
+      "*": {
+        "Type": "Error"
+      },
+      "+": {
+        "Type": "Error"
+      },
+      "Char": {
+        "Type": "Reduce",
+        "Delta": 5
+      },
+      "(": {
+        "Type": "Reduce",
+        "Delta": 5
+      },
+      ")": {
+        "Type": "Reduce",
+        "Delta": 5
+      },
+      "|": {
+        "Type": "Reduce",
+        "Delta": 5
+      },
+      "[": {
+        "Type": "Reduce",
+        "Delta": 5
+      },
+      "]": {
+        "Type": "Error"
+      },
+      "-": {
+        "Type": "Error"
+      }
+    },
+    {
+      "EOF": {
+        "Type": "Error"
+      },
+      "*": {
+        "Type": "Error"
+      },
+      "+": {
+        "Type": "Error"
+      },
+      "Char": {
+        "Type": "Push",
+        "State": 7
+      },
+      "(": {
+        "Type": "Push",
+        "State": 8
+      },
+      ")": {
+        "Type": "Push",
+        "State": 18
+      },
+      "|": {
+        "Type": "Push",
+        "State": 19
+      },
+      "[": {
+        "Type": "Push",
+        "State": 9
+      },
+      "]": {
+        "Type": "Error"
+      },
+      "-": {
+        "Type": "Error"
+      }
+    },
+    {
+      "EOF": {
+        "Type": "Reduce",
+        "Delta": 12
+      },
+      "*": {
+        "Type": "Reduce",
+        "Delta": 12
+      },
+      "+": {
+        "Type": "Reduce",
+        "Delta": 12
+      },
+      "Char": {
+        "Type": "Reduce",
+        "Delta": 12
+      },
+      "(": {
+        "Type": "Reduce",
+        "Delta": 12
+      },
+      ")": {
+        "Type": "Reduce",
+        "Delta": 12
+      },
+      "|": {
+        "Type": "Reduce",
+        "Delta": 12
+      },
+      "[": {
+        "Type": "Reduce",
+        "Delta": 12
+      },
+      "]": {
+        "Type": "Error"
+      },
+      "-": {
+        "Type": "Error"
+      }
+    },
+    {
+      "EOF": {
+        "Type": "Error"
+      },
+      "*": {
+        "Type": "Error"
+      },
+      "+": {
+        "Type": "Error"
+      },
+      "Char": {
+        "Type": "Push",
+        "State": 15
+      },
+      "(": {
+        "Type": "Error"
+      },
+      ")": {
+        "Type": "Error"
+      },
+      "|": {
+        "Type": "Error"
+      },
+      "[": {
+        "Type": "Error"
+      },
+      "]": {
+        "Type": "Push",
+        "State": 16
+      },
+      "-": {
+        "Type": "Error"
+      }
+    },
+    {
+      "EOF": {
+        "Type": "Error"
+      },
+      "*": {
+        "Type": "Error"
+      },
+      "+": {
+        "Type": "Error"
+      },
+      "Char": {
+        "Type": "Reduce",
+        "Delta": 15
+      },
+      "(": {
+        "Type": "Error"
+      },
+      ")": {
+        "Type": "Error"
+      },
+      "|": {
+        "Type": "Error"
+      },
+      "[": {
+        "Type": "Error"
+      },
+      "]": {
+        "Type": "Reduce",
+        "Delta": 15
+      },
+      "-": {
+        "Type": "Push",
+        "State": 21
+      }
+    },
+    {
+      "EOF": {
+        "Type": "Reduce",
+        "Delta": 13
+      },
+      "*": {
+        "Type": "Reduce",
+        "Delta": 13
+      },
+      "+": {
+        "Type": "Reduce",
+        "Delta": 13
+      },
+      "Char": {
+        "Type": "Reduce",
+        "Delta": 13
+      },
+      "(": {
+        "Type": "Reduce",
+        "Delta": 13
+      },
+      ")": {
+        "Type": "Reduce",
+        "Delta": 13
+      },
+      "|": {
+        "Type": "Reduce",
+        "Delta": 13
+      },
+      "[": {
+        "Type": "Reduce",
+        "Delta": 13
+      },
+      "]": {
+        "Type": "Error"
+      },
+      "-": {
+        "Type": "Error"
+      }
+    },
+    {
+      "EOF": {
+        "Type": "Reduce",
+        "Delta": 9
+      },
+      "*": {
+        "Type": "Reduce",
+        "Delta": 9
+      },
+      "+": {
+        "Type": "Reduce",
+        "Delta": 9
+      },
+      "Char": {
+        "Type": "Reduce",
+        "Delta": 9
+      },
+      "(": {
+        "Type": "Reduce",
+        "Delta": 9
+      },
+      ")": {
+        "Type": "Reduce",
+        "Delta": 9
+      },
+      "|": {
+        "Type": "Reduce",
+        "Delta": 9
+      },
+      "[": {
+        "Type": "Reduce",
+        "Delta": 9
+      },
+      "]": {
+        "Type": "Error"
+      },
+      "-": {
+        "Type": "Error"
+      }
+    },
+    {
+      "EOF": {
+        "Type": "Reduce",
+        "Delta": 10
+      },
+      "*": {
+        "Type": "Reduce",
+        "Delta": 10
+      },
+      "+": {
+        "Type": "Reduce",
+        "Delta": 10
+      },
+      "Char": {
+        "Type": "Reduce",
+        "Delta": 10
+      },
+      "(": {
+        "Type": "Reduce",
+        "Delta": 10
+      },
+      ")": {
+        "Type": "Reduce",
+        "Delta": 10
+      },
+      "|": {
+        "Type": "Reduce",
+        "Delta": 10
+      },
+      "[": {
+        "Type": "Reduce",
+        "Delta": 10
+      },
+      "]": {
+        "Type": "Error"
+      },
+      "-": {
+        "Type": "Error"
+      }
+    },
+    {
+      "EOF": {
+        "Type": "Error"
+      },
+      "*": {
+        "Type": "Error"
+      },
+      "+": {
+        "Type": "Error"
+      },
+      "Char": {
+        "Type": "Reduce",
+        "Delta": 1
+      },
+      "(": {
+        "Type": "Reduce",
+        "Delta": 1
+      },
+      ")": {
+        "Type": "Reduce",
+        "Delta": 1
+      },
+      "|": {
+        "Type": "Reduce",
+        "Delta": 1
+      },
+      "[": {
+        "Type": "Reduce",
+        "Delta": 1
+      },
+      "]": {
+        "Type": "Error"
+      },
+      "-": {
+        "Type": "Error"
+      }
+    },
+    {
+      "EOF": {
+        "Type": "Reduce",
+        "Delta": 14
+      },
+      "*": {
+        "Type": "Reduce",
+        "Delta": 14
+      },
+      "+": {
+        "Type": "Reduce",
+        "Delta": 14
+      },
+      "Char": {
+        "Type": "Reduce",
+        "Delta": 14
+      },
+      "(": {
+        "Type": "Reduce",
+        "Delta": 14
+      },
+      ")": {
+        "Type": "Reduce",
+        "Delta": 14
+      },
+      "|": {
+        "Type": "Reduce",
+        "Delta": 14
+      },
+      "[": {
+        "Type": "Reduce",
+        "Delta": 14
+      },
+      "]": {
+        "Type": "Error"
+      },
+      "-": {
+        "Type": "Error"
+      }
+    },
+    {
+      "EOF": {
+        "Type": "Error"
+      },
+      "*": {
+        "Type": "Error"
+      },
+      "+": {
+        "Type": "Error"
+      },
+      "Char": {
+        "Type": "Push",
+        "State": 23
+      },
+      "(": {
+        "Type": "Error"
+      },
+      ")": {
+        "Type": "Error"
+      },
+      "|": {
+        "Type": "Error"
+      },
+      "[": {
+        "Type": "Error"
+      },
+      "]": {
+        "Type": "Error"
+      },
+      "-": {
+        "Type": "Error"
+      }
+    },
+    {
+      "EOF": {
+        "Type": "Error"
+      },
+      "*": {
+        "Type": "Error"
+      },
+      "+": {
+        "Type": "Error"
+      },
+      "Char": {
+        "Type": "Push",
+        "State": 7
+      },
+      "(": {
+        "Type": "Push",
+        "State": 8
+      },
+      ")": {
+        "Type": "Push",
+        "State": 18
+      },
+      "|": {
+        "Type": "Push",
+        "State": 19
+      },
+      "[": {
+        "Type": "Push",
+        "State": 9
+      },
+      "]": {
+        "Type": "Error"
+      },
+      "-": {
+        "Type": "Error"
+      }
+    },
+    {
+      "EOF": {
+        "Type": "Error"
+      },
+      "*": {
+        "Type": "Error"
+      },
+      "+": {
+        "Type": "Error"
+      },
+      "Char": {
+        "Type": "Reduce",
+        "Delta": 16
+      },
+      "(": {
+        "Type": "Error"
+      },
+      ")": {
+        "Type": "Error"
+      },
+      "|": {
+        "Type": "Error"
+      },
+      "[": {
+        "Type": "Error"
+      },
+      "]": {
+        "Type": "Reduce",
+        "Delta": 16
+      },
+      "-": {
+        "Type": "Error"
+      }
+    },
+    {
+      "EOF": {
+        "Type": "Reduce",
+        "Delta": 11
+      },
+      "*": {
+        "Type": "Reduce",
+        "Delta": 11
+      },
+      "+": {
+        "Type": "Reduce",
+        "Delta": 11
+      },
+      "Char": {
+        "Type": "Reduce",
+        "Delta": 11
+      },
+      "(": {
+        "Type": "Reduce",
+        "Delta": 11
+      },
+      ")": {
+        "Type": "Reduce",
+        "Delta": 11
+      },
+      "|": {
+        "Type": "Reduce",
+        "Delta": 11
+      },
+      "[": {
+        "Type": "Reduce",
+        "Delta": 11
+      },
+      "]": {
+        "Type": "Error"
+      },
+      "-": {
+        "Type": "Error"
+      }
+    }
+  ],
+  "Deltas": [
+    {
+      "State": "Start",
+      "Delta": [
+        "R",
+        "EOF"
+      ]
+    },
+    {
+      "State": "R",
+      "Delta": [],
+      "Action": "$.Type='Mul';$.Values=[]"
+    },
+    {
+      "State": "R",
+      "Delta": [
+        "R",
+        "S"
+      ],
+      "Action": "$=values[0];$.Values.push(values[1])"
+    },
+    {
+      "State": "R",
+      "Delta": [
+        "R",
+        "E"
+      ],
+      "Action": "$=values[0];$.Values.push(values[1])"
+    },
+    {
+      "State": "E",
+      "Delta": [
+        "S",
+        "*"
+      ],
+      "Action": "$.Type='Closure';$.Value=values[0]"
+    },
+    {
+      "State": "E",
+      "Delta": [
+        "S",
+        "+"
+      ],
+      "Action": "$.Type='PlusClosure';$.Value=values[0]"
+    },
+    {
+      "State": "S",
+      "Delta": [
+        "Char"
+      ],
+      "Action": "$.Type='Char';$.Value=values[0].Char"
+    },
+    {
+      "State": "S",
+      "Delta": [
+        "Add"
+      ],
+      "Action": "$=values[0]"
+    },
+    {
+      "State": "S",
+      "Delta": [
+        "Range"
+      ],
+      "Action": "$=values[0]"
+    },
+    {
+      "State": "Add",
+      "Delta": [
+        "(",
+        "R",
+        "Add'"
+      ],
+      "Action": "$.Type='Add';$.Values=Array.prototype.concat([values[1]],values[2].Values)"
+    },
+    {
+      "State": "Add'",
+      "Delta": [
+        ")"
+      ],
+      "Action": "$.Type='Add';$.Values=[]"
+    },
+    {
+      "State": "Add'",
+      "Delta": [
+        "|",
+        "R",
+        "Add'"
+      ],
+      "Action": "$.Type='Add';$.Values=Array.prototype.concat([values[1]],values[2].Values)"
+    },
+    {
+      "State": "Range",
+      "Delta": [
+        "[",
+        "Range'"
+      ],
+      "Action": "$=values[1]"
+    },
+    {
+      "State": "Range'",
+      "Delta": [
+        "]"
+      ],
+      "Action": "$.Type='Range';$.Values=[]"
+    },
+    {
+      "State": "Range'",
+      "Delta": [
+        "RangeItem",
+        "Range'"
+      ],
+      "Action": "$=values[1];$.Values.push(values[0])"
+    },
+    {
+      "State": "RangeItem",
+      "Delta": [
+        "Char"
+      ],
+      "Action": "$.Type='Char';$.Value=values[0].Char"
+    },
+    {
+      "State": "RangeItem",
+      "Delta": [
+        "Char",
+        "-",
+        "Char"
+      ],
+      "Action": "$.Type='To';$.Left=values[0].Char;$.Right=values[2].Char"
+    }
+  ]
+}

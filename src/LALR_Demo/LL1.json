@@ -1,0 +1,268 @@
+{
+  "States": [
+    "Start",
+    "S",
+    "S1",
+    "S2",
+    "E",
+    "Add1",
+    "To",
+    "Alpha1",
+    "EChar"
+  ],
+  "Terminals": [
+    "Char",
+    "*",
+    "+",
+    "(",
+    ")",
+    "|",
+    "[",
+    "]",
+    "-",
+    "EOF"
+  ],
+  "Selections": {
+    "Start": {
+      "Char": 0,
+      "*": -1,
+      "+": -1,
+      "(": 0,
+      ")": -1,
+      "|": -1,
+      "[": 0,
+      "]": -1,
+      "-": 0,
+      "EOF": -1
+    },
+    "S": {
+      "Char": 1,
+      "*": -1,
+      "+": -1,
+      "(": 1,
+      ")": -1,
+      "|": -1,
+      "[": 1,
+      "]": -1,
+      "-": 1,
+      "EOF": -1
+    },
+    "S1": {
+      "Char": 2,
+      "*": 3,
+      "+": 6,
+      "(": 2,
+      ")": 2,
+      "|": 2,
+      "[": 2,
+      "]": -1,
+      "-": 2,
+      "EOF": 2
+    },
+    "S2": {
+      "Char": 5,
+      "*": -1,
+      "+": -1,
+      "(": 5,
+      ")": 4,
+      "|": 4,
+      "[": 5,
+      "]": -1,
+      "-": 5,
+      "EOF": 4
+    },
+    "E": {
+      "Char": 7,
+      "*": -1,
+      "+": -1,
+      "(": 8,
+      ")": -1,
+      "|": -1,
+      "[": 9,
+      "]": -1,
+      "-": 7,
+      "EOF": -1
+    },
+    "Add1": {
+      "Char": -1,
+      "*": -1,
+      "+": -1,
+      "(": -1,
+      ")": 10,
+      "|": 11,
+      "[": -1,
+      "]": -1,
+      "-": -1,
+      "EOF": -1
+    },
+    "To": {
+      "Char": 12,
+      "*": -1,
+      "+": -1,
+      "(": -1,
+      ")": -1,
+      "|": -1,
+      "[": -1,
+      "]": 12,
+      "-": 13,
+      "EOF": -1
+    },
+    "Alpha1": {
+      "Char": 17,
+      "*": -1,
+      "+": -1,
+      "(": -1,
+      ")": -1,
+      "|": -1,
+      "[": -1,
+      "]": 16,
+      "-": -1,
+      "EOF": -1
+    },
+    "EChar": {
+      "Char": 14,
+      "*": -1,
+      "+": -1,
+      "(": -1,
+      ")": -1,
+      "|": -1,
+      "[": -1,
+      "]": -1,
+      "-": 15,
+      "EOF": -1
+    }
+  },
+  "Deltas": [
+    {
+      "State": "Start",
+      "Delta": [
+        "S",
+        "EOF"
+      ],
+      "Action": "Parse($0);$$.Push({Type:'Mul',Values:$$.Down()})"
+    },
+    {
+      "State": "S",
+      "Delta": [
+        "E",
+        "S1",
+        "S2"
+      ],
+      "Action": "Parse($0);Parse($1);Parse($2)"
+    },
+    {
+      "State": "S1",
+      "Delta": [],
+      "Action": ""
+    },
+    {
+      "State": "S1",
+      "Delta": [
+        "*"
+      ],
+      "Action": "$$.Push({Type:'Closure',Value:$$.Pop()})"
+    },
+    {
+      "State": "S2",
+      "Delta": [],
+      "Action": ""
+    },
+    {
+      "State": "S2",
+      "Delta": [
+        "S"
+      ],
+      "Action": "Parse($0)"
+    },
+    {
+      "State": "S1",
+      "Delta": [
+        "+"
+      ],
+      "Action": "$$.Push({Type:'PlusClosure',Value:$$.Pop()})"
+    },
+    {
+      "State": "E",
+      "Delta": [
+        "EChar"
+      ],
+      "Action": "Parse($0)"
+    },
+    {
+      "State": "E",
+      "Delta": [
+        "(",
+        "S",
+        "Add1"
+      ],
+      "Action": "$$.Up();$$.Up();Parse($1);Parse($2)"
+    },
+    {
+      "State": "E",
+      "Delta": [
+        "[",
+        "Alpha1"
+      ],
+      "Action": "$$.Up();Parse($1)"
+    },
+    {
+      "State": "Add1",
+      "Delta": [
+        ")"
+      ],
+      "Action": "$$.Push({Type:'Mul',Values:$$.Down()});$$.Push({Type:'Add',Values:$$.Down()})"
+    },
+    {
+      "State": "Add1",
+      "Delta": [
+        "|",
+        "S",
+        "Add1"
+      ],
+      "Action": "$$.Push({Type:'Mul',Values:$$.Down()});$$.Up();Parse($1);Parse($2)"
+    },
+    {
+      "State": "To",
+      "Delta": [],
+      "Action": ""
+    },
+    {
+      "State": "To",
+      "Delta": [
+        "-",
+        "EChar"
+      ],
+      "Action": "var l=$$.Pop();Parse($1);var r=$$.Pop();$$.Push({Type:'To',Left:l,Right:r})"
+    },
+    {
+      "State": "EChar",
+      "Delta": [
+        "Char"
+      ],
+      "Action": "$$.Push({Type:'Char',Value:$0.Value.Char})"
+    },
+    {
+      "State": "EChar",
+      "Delta": [
+        "-"
+      ],
+      "Action": "$$.Push({Type:'Char',Value:'-'})"
+    },
+    {
+      "State": "Alpha1",
+      "Delta": [
+        "]"
+      ],
+      "Action": "$$.Push({Type:'Alpha',Values:$$.Down()})"
+    },
+    {
+      "State": "Alpha1",
+      "Delta": [
+        "Char",
+        "To",
+        "Alpha1"
+      ],
+      "Action": "$$.Push({Type:'Char',Value:$0.Value.Char});Parse($1);Parse($2)"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+<Start>-><R>'EOF':
+<R>->:$.Type='Mul';$.Values=[]
+<R>-><R><S>:$=values[0];$.Values.push(values[1])
+<R>-><R><E>:$=values[0];$.Values.push(values[1])
+<E>-><S>'*':$.Type='Closure';$.Value=values[0]
+<E>-><S>'+':$.Type='PlusClosure';$.Value=values[0]
+<S>->'Char':$.Type='Char';$.Value=values[0].Char
+<S>-><Add>:$=values[0]
+<S>-><Range>:$=values[0]
+<Add>->'('<R><Add'>:$.Type='Add';$.Values=Array.prototype.concat([values[1]],values[2].Values)
+<Add'>->')':$.Type='Add';$.Values=[]
+<Add'>->'|'<R><Add'>:$.Type='Add';$.Values=Array.prototype.concat([values[1]],values[2].Values)
+<Range>->'['<Range'>:$=values[1]
+<Range'>->']':$.Type='Range';$.Values=[]
+<Range'>-><RangeItem><Range'>:$=values[1];$.Values.push(values[0])
+<RangeItem>->'Char':$.Type='Char';$.Value=values[0].Char
+<RangeItem>->'Char''-''Char':$.Type='To';$.Left=values[0].Char;$.Right=values[2].Char

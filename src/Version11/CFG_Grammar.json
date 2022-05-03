@@ -1,0 +1,37 @@
+[
+    {
+        "State":"Start",
+        "Delta":["S","EOF"],
+        "Action":"return $0"
+    },
+    {
+        "State":"S",
+        "Delta":["State","->","E"],
+        "Action":"return {State:$0.Name,Delta:$2}"
+    },
+    {
+        "State":"S",
+        "Delta":["State","->","E","Action"],
+        "Action":"return {State:$0.Name,Delta:$2,Action:$3.Value}"
+    },
+    {
+        "State":"E",
+        "Delta":["State"],
+        "Action":"return [$0.Name]"
+    },
+    {
+        "State":"E",
+        "Delta":["E","State"],
+        "Action":"$0.push($1.Name);return $0"
+    },
+    {
+        "State":"E",
+        "Delta":["Terminal"],
+        "Action":"return [$0.Name]"
+    },
+    {
+        "State":"E",
+        "Delta":["E","Terminal"],
+        "Action":"$0.push($1.Name);return $0"
+    }
+]

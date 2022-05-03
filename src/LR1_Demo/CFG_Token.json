@@ -1,0 +1,6 @@
+{
+    "<[a-zA-Z']+>":"$.Name=value.substr(1,value.length-2);$.Type='State'",
+    "->":"$.Type='->'",
+    "'[0-9a-zA-Z\\[\\]\\\\\\(\\)\\-=\\|\\*<>:\\+\\{\\},]*'":"$.Name=value.substr(1,value.length-2);$.Type='Terminal'",
+    ":[0-9a-zA-Z=\\s$:;,\\{\\}\\(\\)\\.\\[\\]\\{\\}]+":"$.Value=value.substr(1,value.length-1);$.Type='Action'"
+}

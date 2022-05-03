@@ -1,0 +1,69 @@
+[
+  {
+    "State": "Start",
+    "Delta": [
+      "R",
+      "EOF"
+    ]
+  },
+  {
+    "State": "R",
+    "Delta": [
+      "S"
+    ]
+  },
+  {
+    "State": "R",
+    "Delta": [
+      "E"
+    ]
+  },
+  {
+    "State": "E",
+    "Delta": [
+      "S",
+      "*"
+    ]
+  },
+  {
+    "State": "E",
+    "Delta": [
+      "S",
+      "+"
+    ]
+  },
+  {
+    "State": "S",
+    "Delta": [
+      "Char"
+    ]
+  },
+  {
+    "State": "S",
+    "Delta": [
+      "Add"
+    ]
+  },
+  {
+    "State": "Add",
+    "Delta": [
+      "(",
+      "R",
+      "Add'"
+    ]
+  },
+  {
+    "State": "Add'",
+    "Delta": [
+      ")"
+    ]
+  },
+  {
+    "State": "Add'",
+    "Delta": [
+      "|",
+      "R",
+      "Add'"
+    ]
+  }
+]

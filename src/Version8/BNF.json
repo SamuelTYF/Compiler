@@ -1,0 +1,153 @@
+{
+  "States": [
+    "Start",
+    "E",
+    "Temp2",
+    "Temp3",
+    "Temp4"
+  ],
+  "Terminals": [
+    "State",
+    "->",
+    "EOF",
+    "*",
+    "(",
+    "|",
+    ")",
+    "Terminal"
+  ],
+  "Selections": {
+    "Start": {
+      "State": 0,
+      "->": -1,
+      "EOF": -1,
+      "*": -1,
+      "(": -1,
+      "|": -1,
+      ")": -1,
+      "Terminal": -1
+    },
+    "E": {
+      "State": 1,
+      "->": -1,
+      "EOF": -1,
+      "*": -1,
+      "(": 3,
+      "|": -1,
+      ")": -1,
+      "Terminal": 2
+    },
+    "Temp2": {
+      "State": -1,
+      "->": -1,
+      "EOF": -1,
+      "*": -1,
+      "(": -1,
+      "|": 5,
+      ")": 4,
+      "Terminal": -1
+    },
+    "Temp3": {
+      "State": 7,
+      "->": -1,
+      "EOF": 6,
+      "*": -1,
+      "(": 7,
+      "|": 6,
+      ")": 6,
+      "Terminal": 7
+    },
+    "Temp4": {
+      "State": 8,
+      "->": -1,
+      "EOF": 8,
+      "*": 9,
+      "(": 8,
+      "|": 8,
+      ")": 8,
+      "Terminal": 8
+    }
+  },
+  "Deltas": [
+    {
+      "State": "Start",
+      "Delta": [
+        "State",
+        "->",
+        "E",
+        "Temp4",
+        "Temp3",
+        "EOF"
+      ],
+      "Action": "$$.Up();$$.Push({Type:'Terminal',Value:$0});$$.Push({Type:'Terminal',Value:$1});Parse($2);Parse($3);Parse($4);$$.Push({Type:'Terminal',Value:$5});$$.Push({Type:'Start',Values:$$.Down()});"
+    },
+    {
+      "State": "E",
+      "Delta": [
+        "State"
+      ],
+      "Action": "$$.Up();$$.Push({Type:'Terminal',Value:$0});$$.Push({Type:'E',Values:$$.Down()});"
+    },
+    {
+      "State": "E",
+      "Delta": [
+        "Terminal"
+      ],
+      "Action": "$$.Up();$$.Push({Type:'Terminal',Value:$0});$$.Push({Type:'E',Values:$$.Down()});"
+    },
+    {
+      "State": "E",
+      "Delta": [
+        "(",
+        "E",
+        "Temp4",
+        "Temp3",
+        "Temp2",
+        ")"
+      ],
+      "Action": "$$.Up();$$.Push({Type:'Terminal',Value:$0});Parse($1);Parse($2);Parse($3);$$.Up();$$.Up();Parse($4);$$.Down();$$.Push({Type:'Closure',Values:$$.Down()});$$.Push({Type:'Terminal',Value:$5});$$.Push({Type:'Add',Values:$$.Down()});$$.Push({Type:'E',Values:$$.Down()});"
+    },
+    {
+      "State": "Temp2",
+      "Delta": [],
+      "Action": ""
+    },
+    {
+      "State": "Temp2",
+      "Delta": [
+        "|",
+        "E",
+        "Temp4",
+        "Temp3",
+        "Temp2"
+      ],
+      "Action": "$$.Push({Type:'Terminal',Value:$0});Parse($1);Parse($2);Parse($3);$$.Push({Type:'ClosureItem',Values:$$.Down()});$$.Up();Parse($4);"
+    },
+    {
+      "State": "Temp3",
+      "Delta": [],
+      "Action": ""
+    },
+    {
+      "State": "Temp3",
+      "Delta": [
+        "E",
+        "Temp4",
+        "Temp3"
+      ],
+      "Action": "Parse($0);Parse($1);Parse($2);"
+    },
+    {
+      "State": "Temp4",
+      "Delta": [],
+      "Action": ""
+    },
+    {
+      "State": "Temp4",
+      "Delta": [
+        "*"
+      ],
+      "Action": "var t=$$.Pop();$$.Up();$$.Push(t);$$.Push({Type:'Terminal',Value:$0});$$.Push({Type:'T',Values:$$.Down()});"
+    }
+  ]
+}

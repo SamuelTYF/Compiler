@@ -1,0 +1,104 @@
+[
+    {
+      "State": "Start",
+      "Delta": [
+        "JSON",
+        "EOF"
+      ],
+      "Action": "return $0"
+    },
+    {
+      "State": "JSON",
+      "Delta": [
+        "int"
+      ],
+      "Action": "return $0.Value"
+    },
+    {
+      "State": "JSON",
+      "Delta": [
+        "Array"
+      ],
+      "Action": "return $0"
+    },
+    {
+      "State": "Array",
+      "Delta": [
+        "[",
+        "]"
+      ],
+      "Action": "return []"
+    },
+    {
+      "State": "Array",
+      "Delta": [
+        "[",
+        "JSON",
+        "Array'"
+      ],
+      "Action": "return Array.prototype.concat([$0],$1)"
+    },
+    {
+      "State": "Array'",
+      "Delta": [
+        "]"
+      ],
+      "Action": "return []"
+    },
+    {
+      "State": "JSON",
+      "Delta": [
+        "String"
+      ],
+      "Action": "return $0.Value"
+    },
+    {
+      "State": "JSON",
+      "Delta": [
+        "Object"
+      ],
+      "Action": "return $0"
+    },
+    {
+      "State": "Object",
+      "Delta": [
+        "{",
+        "}"
+      ],
+      "Action": "return {}"
+    },
+    {
+      "State": "Object",
+      "Delta": [
+        "{",
+        "ObjectItem",
+        "Object'"
+      ],
+      "Action": "$1[$0.Key]=$0.Value;return $1"
+    },
+    {
+      "State": "ObjectItem",
+      "Delta": [
+        "String",
+        ":",
+        "JSON"
+      ],
+      "Action": "return {Key:$0.Value,Value:$1}"
+    },
+    {
+      "State": "Object'",
+      "Delta": [
+        "}"
+      ],
+      "Action": "return {}"
+    },
+    {
+      "State": "Object'",
+      "Delta": [
+        ",",
+        "ObjectItem",
+        "Object'"
+      ],
+      "Action": "$1[$0.Key]=$0.Value;return $1"
+    }
+  ]

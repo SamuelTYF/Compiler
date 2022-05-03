@@ -1,0 +1,26 @@
+[
+    {
+        "State":"Start",
+        "Delta":["S","EOF"]
+    },
+    {
+        "State":"S",
+        "Delta":["L","=","R"]
+    },
+    {
+        "State":"S",
+        "Delta":["R"]
+    },
+    {
+        "State":"L",
+        "Delta":["*","R"]
+    },
+    {
+        "State":"L",
+        "Delta":["id"]
+    },
+    {
+        "State":"R",
+        "Delta":["L"]
+    }
+]
