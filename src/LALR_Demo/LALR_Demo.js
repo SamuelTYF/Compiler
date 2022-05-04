@@ -30,7 +30,7 @@ export default class LALR_Demo extends Component
     this.Parser.Build()
     console.log(this.Parser)
 
-    var lr1=new LALR(Grammar)
+    var lr1=new LALR(CFG_Grammar)
     this.InitGrammar=lr1.Deltas.map(d=>"<"+d.State+">->"+d.Delta.map(value=>lr1.States.includes(value)?"<"+value+">":"'"+value+"'").join("")+(typeof(d.Action)=="undefined"?"":":"+d.Action)).join("\n")
     this.InitToken=""
     for(var key in Token)

@@ -14,6 +14,7 @@ export default class Tokenizor_Demo extends Component
   {
     super(props)
     this.TokenBox=createRef()
+    this.MethodBox=createRef()
     this.SentenceBox=createRef()
 
     this.state={
@@ -27,9 +28,9 @@ export default class Tokenizor_Demo extends Component
     var nfa=regs.Build()
     var dfa=nfa.ToDFA()
     console.log(dfa)
-    var code=Create_Tokenizor(dfa)
+    var code=Create_Tokenizor(dfa,this.MethodBox.current.value.split("\n").join("\n\t"))
     console.log(code)
-    var Tokenizor=eval(code+"new Tokenizor()");
+    var Tokenizor=eval(code+"\nnew Tokenizor()");
     console.log(Tokenizor);
     this.setState({
       code:code,
@@ -60,10 +61,12 @@ export default class Tokenizor_Demo extends Component
   {
     var text=this.SentenceBox.current.value.trim()
     this.state.Tokenizor.StartParse(text)
+    console.log(this.state.Tokenizor)
     var r=[]
     while(true)
     {
       var token=this.state.Tokenizor.Get()
+      console.log(token)
       r.push(token)
       if(token==null||token.Type=='EOF')break;
     }
@@ -71,10 +74,18 @@ export default class Tokenizor_Demo extends Component
       tokens:r
     })
   }
+  check(e)
+  {
+    console.log(e.target)
+    var a={}
+    a[e.target.value]=e.target.checked
+    this.setState(a)
+  }
   render() {
     return (
         <div>
             <ButtonComponent onClick={this.CreateTokenizor.bind(this)}>CreateTokenizor</ButtonComponent>
+            <TextBoxComponent htmlAttributes={{rows:2}} value={""} multiline={true} floatLabelType="Auto" placeholder="Enter The Method" ref={this.MethodBox} onChange={this.textChange.bind(this)}></TextBoxComponent>
             <TextBoxComponent htmlAttributes={{rows:2}} multiline={true} floatLabelType="Auto" placeholder="Enter The Token" ref={this.TokenBox} onChange={this.textChange.bind(this)}></TextBoxComponent>
             <Markdown children={"```javascript\n"+this.state.code+"\n```"}/>
             <ButtonComponent onClick={this.Tokenize.bind(this)}>Tokenize</ButtonComponent>

@@ -61,7 +61,6 @@ class LR_Parser
         var goto=true
         while(true)
         {
-            console.log(goto,this.StateStack.Top(),token,symbol)
             if(goto){
                 switch(this.StateStack.Top())
                 {
@@ -80,6 +79,6 @@ class LR_Parser
                 }
             }
         }
-        
     }
+    //Method
 }

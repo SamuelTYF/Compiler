@@ -33,7 +33,7 @@ function CreateState(index)
     }
     var conditions=[]
     if(index==0)
-        conditions.push("if(char==null){$.Type='EOF';return $}")
+        conditions.push("if(char=='\0'){$.Type='EOF';return $}")
     for(var i=0;i<statecount;i++){
         var s=states[i]
         if(groups.get(s).length>0)

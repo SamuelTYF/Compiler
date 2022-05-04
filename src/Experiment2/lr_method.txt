@@ -1,0 +1,5 @@
+LoadAssemble(assmble)
+{
+    console.log(assmble)
+    return assmble.join(".")
+}

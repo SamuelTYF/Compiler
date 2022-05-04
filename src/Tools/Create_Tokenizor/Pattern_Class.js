@@ -40,7 +40,7 @@ class Tokenizor
         var $={}
         while(this.Index<=this.Length)
         {
-            var char=this.Index==this.Length?null:this.String[this.Index]
+            var char=this.Index==this.Length?'\0':this.String[this.Index]
             switch(this.State)
             {
                 //StateCode

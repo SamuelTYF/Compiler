@@ -25,7 +25,7 @@ class Stack{
 		return this.stack.Value
 	}
 }
-class LR_Parser
+export default class LR_Parser
 {
     constructor()
     {
@@ -61,7 +61,6 @@ class LR_Parser
         var goto=true
         while(true)
         {
-            console.log(goto,this.StateStack.Top(),token,symbol)
             if(goto){
                 switch(this.StateStack.Top())
                 {
@@ -236,7 +235,7 @@ class LR_Parser
 						if(token.Type=='EOF'){
 							var values=this.Pop(4)
 							var $={}
-							$.State=values[0].Name,$.Delta=values[2],$.Action=values[3].Value
+							$.State=values[0].Name;$.Delta=values[2];$.Action=values[3].Value
 							this.ValueStack.Push($)
 							symbol="S"
 							goto=false

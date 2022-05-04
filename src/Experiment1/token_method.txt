@@ -1,0 +1,5 @@
+keys=new Set(["for","while","do","if","else","int","float","namespace","using","class","public","private","interval"])
+IsKey(value)
+{
+    return this.keys.has(value)
+}

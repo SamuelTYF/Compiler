@@ -1,0 +1,9 @@
+<Start>-><S>'EOF':$=values[0]
+<S>->'State''->'<E>:$.State=values[0].Name;$.Delta=values[2]
+<S>->'State''->':$.State=values[0].Name;$.Delta=[]
+<S>->'State''->'<E>'Action':$.State=values[0].Name;$.Delta=values[2];$.Action=values[3].Value
+<S>->'State''->''Action':$.State=values[0].Name;$.Delta=[];$.Action=values[2].Value
+<E>->'State':$=[values[0].Name]
+<E>-><E>'State':$=values[0];$.push(values[1].Name)
+<E>->'Terminal':$=[values[0].Name]
+<E>-><E>'Terminal':$=values[0];$.push(values[1].Name)

@@ -19,6 +19,7 @@ import LALR_Demo from "./LALR_Demo/LALR_Demo"
 import Regex_Demo from "./Regex_Demo/Regex_Demo"
 import Token_Demo from "./Token_Demo/Token_Demo";
 import Tokenizor_Demo from "./Tokenizor_Demo/Tokenizor_Demo";
+import Parser_Demo from "./Parser_Demo/Parser_Demo"
 
 export default class App extends Component
 {
@@ -31,7 +32,7 @@ export default class App extends Component
     return(
         <Container>
             <Routes>
-                <Route exact path='/' element={<Tokenizor_Demo/>} />
+                <Route exact path='/' element={<Parser_Demo/>} />
                 <Route path="/version1" element={<Version1/>}></Route>
                 <Route path="/version2" element={<Version2/>}></Route>
                 <Route path="/version3" element={<Version3/>}></Route>
@@ -50,6 +51,7 @@ export default class App extends Component
                 <Route path="/Regex" element={<Regex_Demo/>}></Route>
                 <Route path="/Token" element={<Token_Demo/>}></Route>
                 <Route path="/Tokenizor" element={<Tokenizor_Demo/>}></Route>
+                <Route path="/Parser" element={<Parser_Demo/>}></Route>
             </Routes>
         </Container>
     )
