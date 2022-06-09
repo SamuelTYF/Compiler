@@ -9,7 +9,7 @@ export default class Version3 extends Component
 
     this.RegParser=new RegParser()
 
-    console.log(this.RegParser.tokenizor)
+    console.log(this.RegParser.tokenizer)
 
     var text="[+--]";
 

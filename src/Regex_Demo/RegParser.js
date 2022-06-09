@@ -1,4 +1,4 @@
-import DFA_Tokenizor from "./DFA_Tokenizor";
+import DFA_Tokenizer from "./DFA_Tokenizer";
 import Reg from "./Reg";
 import ENFA from "./ENFA";
 import LR_Parser from "./LR_Parser"
@@ -6,7 +6,7 @@ export default class RegParser
 {
     constructor()
     {
-        this.tokenizor=new DFA_Tokenizor()
+        this.tokenizer=new DFA_Tokenizer()
 
         this.ll=new LR_Parser()
 
@@ -18,9 +18,9 @@ export default class RegParser
 
         try {
 
-            this.tokenizor.StartParse(text);
+            this.tokenizer.StartParse(text);
       
-            result["tree"]=this.ll.Parse(this.tokenizor);
+            result["tree"]=this.ll.Parse(this.tokenizer);
     
             var reg=new Reg();
         

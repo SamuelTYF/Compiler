@@ -18,21 +18,33 @@ import LR1_Demo from "./LR1_Demo/LR1_Demo";
 import LALR_Demo from "./LALR_Demo/LALR_Demo"
 import Regex_Demo from "./Regex_Demo/Regex_Demo"
 import Token_Demo from "./Token_Demo/Token_Demo";
-import Tokenizor_Demo from "./Tokenizor_Demo/Tokenizor_Demo";
+import Tokenizer_Demo from "./Tokenizer_Demo/Tokenizer_Demo";
 import Parser_Demo from "./Parser_Demo/Parser_Demo"
-
+import { Markdown } from "./Markdown";
+import md from "./Home.md"
 export default class App extends Component
 {
   constructor(props)
   {
       super(props)
+      this.state={
+        markdown:null
+      }
+  }
+  componentDidMount()
+  {
+    fetch(md)
+    .then(value=>value.text())
+    .then(value=>{
+      this.setState({markdown:value})
+    })
   }
   render()
   {
     return(
         <Container>
             <Routes>
-                <Route exact path='/' element={<Parser_Demo/>} />
+                <Route exact path='/' element={<Markdown children={this.state.markdown}/>} />
                 <Route path="/version1" element={<Version1/>}></Route>
                 <Route path="/version2" element={<Version2/>}></Route>
                 <Route path="/version3" element={<Version3/>}></Route>
@@ -50,7 +62,7 @@ export default class App extends Component
                 <Route path="/LALR" element={<LALR_Demo/>}></Route>
                 <Route path="/Regex" element={<Regex_Demo/>}></Route>
                 <Route path="/Token" element={<Token_Demo/>}></Route>
-                <Route path="/Tokenizor" element={<Tokenizor_Demo/>}></Route>
+                <Route path="/Tokenizer" element={<Tokenizer_Demo/>}></Route>
                 <Route path="/Parser" element={<Parser_Demo/>}></Route>
             </Routes>
         </Container>

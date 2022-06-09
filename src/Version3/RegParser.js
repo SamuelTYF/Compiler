@@ -1,4 +1,4 @@
-import Create_DFA_Tokenizor from "./DFA_Tokenizor";
+import Create_DFA_Tokenizer from "./DFA_Tokenizer";
 import PDA from "../Version1/PDA";
 import Reg from "../Version1/Reg";
 import ENFA from "../Version1/ENFA";
@@ -8,7 +8,7 @@ export default class RegParser
 {
     constructor()
     {
-        this.tokenizor=Create_DFA_Tokenizor(DFA)
+        this.tokenizer=Create_DFA_Tokenizer(DFA)
 
         this.pda=new PDA(pda_json);
     }
@@ -17,7 +17,7 @@ export default class RegParser
         var result={}
 
         try {
-            result["tokens"]=this.tokenizor.Encode(text);
+            result["tokens"]=this.tokenizer.Encode(text);
       
             result["tree"]=this.pda.parse(result["tokens"]);
         

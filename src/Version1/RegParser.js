@@ -1,4 +1,4 @@
-import Reg_Tokenizor from "./Reg_Tokenizor";
+import Reg_Tokenizer from "./Reg_Tokenizer";
 import PDA from "./PDA";
 import Reg from "./Reg";
 import ENFA from "./ENFA";
@@ -10,7 +10,7 @@ export default class RegParser
     {
         console.log(token_json)
         
-        this.tokenizor=new Reg_Tokenizor(token_json);
+        this.tokenizer=new Reg_Tokenizer(token_json);
         this.pda=new PDA(pda_json);
     }
     Parse(text)
@@ -18,7 +18,7 @@ export default class RegParser
         var result={}
 
         try {
-            result["tokens"]=this.tokenizor.encode(text);
+            result["tokens"]=this.tokenizer.encode(text);
       
             result["tree"]=this.pda.parse(result["tokens"]);
         

@@ -6,7 +6,7 @@ import { ButtonComponent } from "@syncfusion/ej2-react-buttons";
 import "@syncfusion/ej2-react-buttons/styles/bootstrap.css"
 import "@syncfusion/ej2-base/styles/bootstrap.css"
 import LR_Parser from "./LR_Parser"
-import Tokenizor from "./Tokenizor";
+import Tokenizer from "./Tokenizer";
 import LALR from "../LALR_Demo/LALR";
 import Create_Parser from "./Create_Parser"
 
@@ -19,7 +19,7 @@ export default class Parser_Demo extends Component
     this.MethodBox=createRef()
     this.TokenBox=createRef()
 
-    this.Tokenizor=new Tokenizor()
+    this.Tokenizer=new Tokenizer()
     this.Parser=new LR_Parser()
 
     this.state={
@@ -33,8 +33,8 @@ export default class Parser_Demo extends Component
     var texts=this.GrammarBox.current.value.split("\n")
     texts=texts.filter(value=>value.length>0)
     var deltas=texts.map(text=>{
-      this.Tokenizor.StartParse(text)
-      var result=this.Parser.Parse(this.Tokenizor)
+      this.Tokenizer.StartParse(text)
+      var result=this.Parser.Parse(this.Tokenizer)
       return result
     }).filter(value=>value!==null)
     console.log(deltas)

@@ -53,10 +53,10 @@ export default class LR_Parser
         }
         return values
     }
-    Parse(tokenizor)
+    Parse(tokenizer)
     {
         this.Init()
-        var token=tokenizor.Get()
+        var token=tokenizer.Get()
         var symbol=null
         var goto=true
         while(true)
@@ -69,7 +69,7 @@ export default class LR_Parser
 							this.StateStack.Push(2)
 							this.ValueStack.Push(token)
 							goto=true
-							token=tokenizor.Get()
+							token=tokenizer.Get()
 						}
 						else return this.Error(token)
 					break;
@@ -82,7 +82,7 @@ export default class LR_Parser
 							this.StateStack.Push(4)
 							this.ValueStack.Push(token)
 							goto=true
-							token=tokenizor.Get()
+							token=tokenizer.Get()
 						}
 						else return this.Error(token)
 					break;
@@ -102,19 +102,19 @@ export default class LR_Parser
 							this.StateStack.Push(6)
 							this.ValueStack.Push(token)
 							goto=true
-							token=tokenizor.Get()
+							token=tokenizer.Get()
 						}
 						else if(token.Type=='Action'){
 							this.StateStack.Push(7)
 							this.ValueStack.Push(token)
 							goto=true
-							token=tokenizor.Get()
+							token=tokenizer.Get()
 						}
 						else if(token.Type=='Terminal'){
 							this.StateStack.Push(8)
 							this.ValueStack.Push(token)
 							goto=true
-							token=tokenizor.Get()
+							token=tokenizer.Get()
 						}
 						else return this.Error(token)
 					break;
@@ -123,19 +123,19 @@ export default class LR_Parser
 							this.StateStack.Push(9)
 							this.ValueStack.Push(token)
 							goto=true
-							token=tokenizor.Get()
+							token=tokenizer.Get()
 						}
 						else if(token.Type=='Action'){
 							this.StateStack.Push(10)
 							this.ValueStack.Push(token)
 							goto=true
-							token=tokenizor.Get()
+							token=tokenizer.Get()
 						}
 						else if(token.Type=='Terminal'){
 							this.StateStack.Push(11)
 							this.ValueStack.Push(token)
 							goto=true
-							token=tokenizor.Get()
+							token=tokenizer.Get()
 						}
 						else return this.Error(token)
 					break;

@@ -3,7 +3,7 @@ import lr0_json from "./lr0.json";
 import LR0 from "./LR0";
 import LR0_Parser from "./LR0_Parser";
 import Regs from "../Version7/Regs";
-import Create_DFA_Tokenizor from "../Version5/DFA_Tokenizor";
+import Create_DFA_Tokenizer from "../Version5/DFA_Tokenizer";
 import lr0_token from "./lr0_token.json"
 import { Markdown } from "../Markdown";
 import SLR1 from "./SLR1";
@@ -24,9 +24,9 @@ export default class Version10 extends Component
     console.log(nfa)
     var dfa=nfa.ToDFA();
     console.log(dfa);
-    var tokenizor=Create_DFA_Tokenizor(dfa)
-    tokenizor.StartParse("a=**a")
-    var result=parser.Parse(tokenizor)
+    var tokenizer=Create_DFA_Tokenizer(dfa)
+    tokenizer.StartParse("a=**a")
+    var result=parser.Parse(tokenizer)
     console.log(result)
 
     this.state={

@@ -89,8 +89,7 @@ export default class DFA
                 {
                     var di=this.Deltas[ends[i]][this.Terminals[k]]
                     var dj=this.Deltas[ends[j]][this.Terminals[k]]
-                    if(di==null&&dj==null)continue
-                    if(di!==null||dj!==null||di!==dj)
+                    if(di!==null&&dj!==null&&di!==dj)
                     {
                         if(ends[i]==di&&ends[j]==dj)continue
                         if(ends[j]==di&&ends[i]==dj)continue
@@ -132,8 +131,7 @@ export default class DFA
                 {
                     var di=this.Deltas[nends[i]][this.Terminals[k]]
                     var dj=this.Deltas[nends[j]][this.Terminals[k]]
-                    if(di==null&&dj==null)continue
-                    if(di!==null||dj!==null||di!==dj)
+                    if(di!==null&&dj!==null&&di!==dj)
                     {
                         if(nends[i]==di&&nends[j]==dj)continue
                         if(nends[j]==di&&nends[i]==dj)continue

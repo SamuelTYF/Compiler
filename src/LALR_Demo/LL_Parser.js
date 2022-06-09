@@ -18,9 +18,9 @@ export default class LL_Parser
         }
         this.Actions=this.Deltas.map(delta=>Create_Action(delta.Delta.length,delta.Action))
     }
-    Parse(tokenizor)
+    Parse(tokenizer)
     {
-        this.Tokenizor=tokenizor;
+        this.Tokenizer=tokenizer;
         this.State=this.Start;
         this.Stack=this.Top={
             Data:this.Start,
@@ -28,7 +28,7 @@ export default class LL_Parser
         }
         while(this.Stack!==null)
         {
-            var token=tokenizor.Get();
+            var token=tokenizer.Get();
             if(token==null)return null;
             if(!this.Expand(token))return false;
             if(this.Stack.Data==token.Type)

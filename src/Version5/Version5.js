@@ -2,7 +2,7 @@ import { Component } from "react";
 import regex_json from "../Version4/Regex.json"
 import LL1 from "./LL1";
 import dfa_json from "../Version3/DFA.json"
-import Create_DFA_Tokenizor from "./DFA_Tokenizor";
+import Create_DFA_Tokenizer from "./DFA_Tokenizer";
 import Manager from "../Tree/Manager"
 import Tree from "../Tree/Tree"
 import {PrintAndExport,DiagramComponent, Inject } from "@syncfusion/ej2-react-diagrams";
@@ -28,15 +28,15 @@ export default class Version5 extends Component
   {
     super(props)
     this.text="(1|2*3)+"
-    this.tokenizor=Create_DFA_Tokenizor(dfa_json)
+    this.tokenizer=Create_DFA_Tokenizer(dfa_json)
     this.ll1=new LL1(regex_json)
     this.parser=this.ll1.CreateParse()
     console.log(this.text);
-    console.log(this.tokenizor);
+    console.log(this.tokenizer);
     console.log(this.ll1);
     console.log(this.parser)
-    this.tokenizor.StartParse(this.text);
-    var result=this.parser.Parse(this.tokenizor);
+    this.tokenizer.StartParse(this.text);
+    var result=this.parser.Parse(this.tokenizer);
     console.log(result);
     Nodes=new Manager();
     var options=this.parser.GetADT(result);

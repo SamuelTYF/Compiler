@@ -2,7 +2,7 @@ import { Component, createRef } from "react";
 import { TextBoxComponent} from '@syncfusion/ej2-react-inputs';
 import CFG_Token from "../Version11/CFG_token.json"
 import Regs from "../Version7/Regs";
-import Create_DFA_Tokenizor from "../Version5/DFA_Tokenizor";
+import Create_DFA_Tokenizer from "../Version5/DFA_Tokenizer";
 import CFG_Grammar from "../Version11/CFG_Grammar.json"
 import SLR1 from "../Version10/SLR1"
 import LALR from "./LALR";
@@ -23,8 +23,8 @@ export default class Version13 extends Component
     var regs=new Regs(CFG_Token);
     var nfa=regs.Build();
     var dfa=nfa.ToDFA();
-    this.Tokenizor=Create_DFA_Tokenizor(dfa)
-    console.log(this.Tokenizor)
+    this.Tokenizer=Create_DFA_Tokenizer(dfa)
+    console.log(this.Tokenizer)
     var grammar=new SLR1(CFG_Grammar)
     console.log(grammar)
     this.Parser=new LR0_Parser(grammar.GetJson())
@@ -45,8 +45,8 @@ export default class Version13 extends Component
     var texts=this.InputBox.current.value.split("\n")
     texts=texts.filter(value=>value.length>0)
     var deltas=texts.map(text=>{
-      this.Tokenizor.StartParse(text)
-      var result=this.Parser.Parse(this.Tokenizor)
+      this.Tokenizer.StartParse(text)
+      var result=this.Parser.Parse(this.Tokenizer)
       return result
     }).filter(value=>value!==null)
     console.log(deltas)

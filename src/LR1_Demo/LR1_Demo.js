@@ -2,7 +2,7 @@ import { Component, createRef } from "react";
 import { TextBoxComponent} from '@syncfusion/ej2-react-inputs';
 import CFG_Token from "./CFG_Token.json"
 import Regs from "./Regs";
-import Create_DFA_Tokenizor from "./DFA_Tokenizor";
+import Create_DFA_Tokenizer from "./DFA_Tokenizer";
 import CFG_Grammar from "./CFG_Grammar.json"
 import LR1 from "./LR1";
 import LALR from "./LALR";
@@ -27,7 +27,7 @@ export default class LR1_Demo extends Component
     this.TokenBox=createRef()
     this.TextBox=createRef()
 
-    this.Tokenizor=this.BuildTokenizor(CFG_Token)
+    this.Tokenizer=this.BuildTokenizer(CFG_Token)
     var grammar=new Parser(CFG_Grammar)
     console.log(grammar)
     this.Parser=new LR0_Parser(grammar.GetJson())
@@ -41,7 +41,7 @@ export default class LR1_Demo extends Component
       this.InitToken+=key+"\n"+Token[key]+"\n"
     this.state={
       Parseing:false,
-      Tokenizor:this.BuildTokenizor(Token),
+      Tokenizer:this.BuildTokenizer(Token),
       LR1:lr1,
       FollowTable:false,
       PredictionTable:false,
@@ -52,16 +52,16 @@ export default class LR1_Demo extends Component
       result:null
     }
   }
-  BuildTokenizor(json)
+  BuildTokenizer(json)
   {
     var regs=new Regs(json);
     var nfa=regs.Build();
     var dfa=nfa.ToDFA();
-    var Tokenizor=Create_DFA_Tokenizor(dfa)
-    console.log(Tokenizor)
-    return Tokenizor
+    var Tokenizer=Create_DFA_Tokenizer(dfa)
+    console.log(Tokenizer)
+    return Tokenizer
   }
-  CreateTokenizor()
+  CreateTokenizer()
   {
     var texts=this.TokenBox.current.value.split("\n")
     texts=texts.filter(value=>value.length>0)
@@ -73,9 +73,9 @@ export default class LR1_Demo extends Component
     var json={}
     for(var i=0;i<texts.length;i+=2)
       json[texts[i]]=texts[i+1]
-    var tokenizor=this.BuildTokenizor(json)
+    var tokenizer=this.BuildTokenizer(json)
     this.setState({
-      Tokenizor:tokenizor
+      Tokenizer:tokenizer
     })
   }
   CreateParser()
@@ -83,8 +83,8 @@ export default class LR1_Demo extends Component
     var texts=this.GrammarBox.current.value.split("\n")
     texts=texts.filter(value=>value.length>0)
     var deltas=texts.map(text=>{
-      this.Tokenizor.StartParse(text)
-      var result=this.Parser.Parse(this.Tokenizor)
+      this.Tokenizer.StartParse(text)
+      var result=this.Parser.Parse(this.Tokenizer)
       return result
     }).filter(value=>value!==null)
     console.log(deltas)
@@ -97,11 +97,11 @@ export default class LR1_Demo extends Component
   Parse()
   {
     var text=this.TextBox.current.value
-    this.state.Tokenizor.StartParse(text)
+    this.state.Tokenizer.StartParse(text)
     var Parser=new LR1_Parser(this.state.LR1.GetJson())
     if(this.state.Build)
       Parser.Build()
-    var result=Parser.Parse(this.state.Tokenizor)
+    var result=Parser.Parse(this.state.Tokenizer)
     console.log(result)
     this.setState({
       result:result
@@ -131,7 +131,7 @@ export default class LR1_Demo extends Component
   render() {
     return (
         <div>
-            <ButtonComponent onClick={this.CreateTokenizor.bind(this)}>CreateTokenizor</ButtonComponent>
+            <ButtonComponent onClick={this.CreateTokenizer.bind(this)}>CreateTokenizer</ButtonComponent>
             <ButtonComponent onClick={this.CreateParser.bind(this)}>CreateParser</ButtonComponent>
             <ButtonComponent onClick={this.Parse.bind(this)}>Parse</ButtonComponent>
             <CheckBoxComponent label="Build" value={"Build"} checked={this.state.Build} onChange={this.check.bind(this)}></CheckBoxComponent>
@@ -190,7 +190,7 @@ export default class LR1_Demo extends Component
                             </tbody>
                         </table>
                         <div hidden={!this.state.TokenJson}>
-                          <Markdown children={"```json\n"+JSON.stringify(this.state.Tokenizor.json,null,2)+"\n```"}></Markdown>
+                          <Markdown children={"```json\n"+JSON.stringify(this.state.Tokenizer.json,null,2)+"\n```"}></Markdown>
                         </div>
                         <div hidden={!this.state.GrammarJson}>
                           <Markdown children={"```json\n"+JSON.stringify(this.state.LR1.GetJson(),null,2)+"\n```"}></Markdown>

@@ -1,5 +1,5 @@
 import { Component } from "react";
-import Create_DFA_Tokenizor from "../Version5/DFA_Tokenizor";
+import Create_DFA_Tokenizer from "../Version5/DFA_Tokenizer";
 import lr_json from "./lr.json"
 import { Markdown } from "../Markdown";
 import OPG from "./OPG";
@@ -24,9 +24,9 @@ export default class Version9 extends Component
     console.log(nfa)
     var dfa=nfa.ToDFA();
     console.log(dfa);
-    var tokenizor=Create_DFA_Tokenizor(dfa)
-    tokenizor.StartParse("(a+a)")
-    var result=parser.Parse(tokenizor)
+    var tokenizer=Create_DFA_Tokenizer(dfa)
+    tokenizer.StartParse("(a+a)")
+    var result=parser.Parse(tokenizer)
     console.log(result)
     this.state={
       opg:opg,

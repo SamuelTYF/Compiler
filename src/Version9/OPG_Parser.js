@@ -118,7 +118,7 @@ export class OPG_Parser
             }
         }
     }
-    Parse(tokenizor)
+    Parse(tokenizer)
     {
         this.Stack={
             Value:{Type:"EOF"},
@@ -127,7 +127,7 @@ export class OPG_Parser
         this.CurrentP=this.Stack.Value.Type
         while(true)
         {
-            var t=tokenizor.Get()
+            var t=tokenizer.Get()
             console.log("Get Token ",t)
             if(t==null)return null
             while(true)

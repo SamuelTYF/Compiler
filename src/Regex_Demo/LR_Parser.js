@@ -53,10 +53,10 @@ export default class LR_Parser
         }
         return values
     }
-    Parse(tokenizor)
+    Parse(tokenizer)
     {
         this.Init()
-        var token=tokenizor.Get()
+        var token=tokenizer.Get()
         var symbol=null
         var goto=true
         while(true)
@@ -105,19 +105,19 @@ export default class LR_Parser
 							this.StateStack.Push(7)
 							this.ValueStack.Push(token)
 							goto=true
-							token=tokenizor.Get()
+							token=tokenizer.Get()
 						}
 						else if(token.Type=='('){
 							this.StateStack.Push(8)
 							this.ValueStack.Push(token)
 							goto=true
-							token=tokenizor.Get()
+							token=tokenizer.Get()
 						}
 						else if(token.Type=='['){
 							this.StateStack.Push(9)
 							this.ValueStack.Push(token)
 							goto=true
-							token=tokenizor.Get()
+							token=tokenizer.Get()
 						}
 						else return this.Error(token)
 					break;
@@ -185,13 +185,13 @@ export default class LR_Parser
 							this.StateStack.Push(10)
 							this.ValueStack.Push(token)
 							goto=true
-							token=tokenizor.Get()
+							token=tokenizer.Get()
 						}
 						else if(token.Type=='+'){
 							this.StateStack.Push(11)
 							this.ValueStack.Push(token)
 							goto=true
-							token=tokenizor.Get()
+							token=tokenizer.Get()
 						}
 						else if(token.Type=='Char'){
 							var values=this.Pop(2)
@@ -487,13 +487,13 @@ export default class LR_Parser
 							this.StateStack.Push(15)
 							this.ValueStack.Push(token)
 							goto=true
-							token=tokenizor.Get()
+							token=tokenizer.Get()
 						}
 						else if(token.Type==']'){
 							this.StateStack.Push(16)
 							this.ValueStack.Push(token)
 							goto=true
-							token=tokenizor.Get()
+							token=tokenizer.Get()
 						}
 						else return this.Error(token)
 					break;
@@ -604,31 +604,31 @@ export default class LR_Parser
 							this.StateStack.Push(7)
 							this.ValueStack.Push(token)
 							goto=true
-							token=tokenizor.Get()
+							token=tokenizer.Get()
 						}
 						else if(token.Type=='('){
 							this.StateStack.Push(8)
 							this.ValueStack.Push(token)
 							goto=true
-							token=tokenizor.Get()
+							token=tokenizer.Get()
 						}
 						else if(token.Type==')'){
 							this.StateStack.Push(18)
 							this.ValueStack.Push(token)
 							goto=true
-							token=tokenizor.Get()
+							token=tokenizer.Get()
 						}
 						else if(token.Type=='|'){
 							this.StateStack.Push(19)
 							this.ValueStack.Push(token)
 							goto=true
-							token=tokenizor.Get()
+							token=tokenizer.Get()
 						}
 						else if(token.Type=='['){
 							this.StateStack.Push(9)
 							this.ValueStack.Push(token)
 							goto=true
-							token=tokenizor.Get()
+							token=tokenizer.Get()
 						}
 						else return this.Error(token)
 					break;
@@ -704,13 +704,13 @@ export default class LR_Parser
 							this.StateStack.Push(15)
 							this.ValueStack.Push(token)
 							goto=true
-							token=tokenizor.Get()
+							token=tokenizer.Get()
 						}
 						else if(token.Type==']'){
 							this.StateStack.Push(16)
 							this.ValueStack.Push(token)
 							goto=true
-							token=tokenizor.Get()
+							token=tokenizer.Get()
 						}
 						else return this.Error(token)
 					break;
@@ -735,7 +735,7 @@ export default class LR_Parser
 							this.StateStack.Push(21)
 							this.ValueStack.Push(token)
 							goto=true
-							token=tokenizor.Get()
+							token=tokenizer.Get()
 						}
 						else return this.Error(token)
 					break;
@@ -1055,7 +1055,7 @@ export default class LR_Parser
 							this.StateStack.Push(23)
 							this.ValueStack.Push(token)
 							goto=true
-							token=tokenizor.Get()
+							token=tokenizer.Get()
 						}
 						else return this.Error(token)
 					break;
@@ -1064,31 +1064,31 @@ export default class LR_Parser
 							this.StateStack.Push(7)
 							this.ValueStack.Push(token)
 							goto=true
-							token=tokenizor.Get()
+							token=tokenizer.Get()
 						}
 						else if(token.Type=='('){
 							this.StateStack.Push(8)
 							this.ValueStack.Push(token)
 							goto=true
-							token=tokenizor.Get()
+							token=tokenizer.Get()
 						}
 						else if(token.Type==')'){
 							this.StateStack.Push(18)
 							this.ValueStack.Push(token)
 							goto=true
-							token=tokenizor.Get()
+							token=tokenizer.Get()
 						}
 						else if(token.Type=='|'){
 							this.StateStack.Push(19)
 							this.ValueStack.Push(token)
 							goto=true
-							token=tokenizor.Get()
+							token=tokenizer.Get()
 						}
 						else if(token.Type=='['){
 							this.StateStack.Push(9)
 							this.ValueStack.Push(token)
 							goto=true
-							token=tokenizor.Get()
+							token=tokenizer.Get()
 						}
 						else return this.Error(token)
 					break;

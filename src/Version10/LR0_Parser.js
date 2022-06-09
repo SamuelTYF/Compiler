@@ -93,7 +93,7 @@ export default class LR0_Parser{
         if(!this.InsertState(Delta.State,value))return false
         return this.Insert(type,token)
     }
-    Parse(tokenizor)
+    Parse(tokenizer)
     {
         this.Stack={
             Symbol:"EOF",
@@ -102,7 +102,7 @@ export default class LR0_Parser{
         }
         while(true)
         {
-            var token=tokenizor.Get()
+            var token=tokenizer.Get()
             console.log("Get Token",token)
             if(token==null)return null
             if(!this.Insert(token.Type,token))return null
